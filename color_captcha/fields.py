@@ -2,16 +2,14 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 from hashlib import sha1
+from settings import DEFAULT_ERROR_MESSAGES, ERROR_MESSAGES
 from widgets import ColorCaptchaWidget
 
+DEFAULT_ERROR_MESSAGES.update(ERROR_MESSAGES)
 
 class ColorCaptchaField(forms.MultiValueField):
 
-    default_error_messages = {
-        'wrong': _('Wrong answer'),
-        'required': _('This field is required'),
-        'internal': _('Internal error'),
-    }
+    default_error_messages = DEFAULT_ERROR_MESSAGES
     widget = ColorCaptchaWidget()
 
     def __init__(self, *args, **kwargs):
