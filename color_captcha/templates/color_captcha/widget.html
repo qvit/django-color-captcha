@@ -1,0 +1,16 @@
+{% spaceless %}
+<div class="clr_captcha_target">{{ color_option.1 }}</div>
+<input type="hidden" name="{{ name }}_0" value="{{ hash }}" />
+<ul class="clr_captcha_color_choices">
+    {% for color_option in colors %}
+        <li>
+            <input type="radio"
+                   id="id_{{ name }}_1_{{ forloop.counter0 }}"
+                   class="clr_captcha_color"
+                   name="{{ name }}_1"
+                   value="{{ color_option.0 }}" />
+            <label for="id_{{ name }}_1_{{ forloop.counter0 }}" style="background-color: {{ color_option.0 }};"></label>
+        </li>
+    {% endfor %}
+</ul>
+{% endspaceless %}

@@ -1,0 +1,3 @@
+recursive-include color_captcha *
+include README README.rst DESCRIPTION
+exclude *.orig *.pyc
