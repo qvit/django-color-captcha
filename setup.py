@@ -32,7 +32,7 @@ setup(
 
     url='https://github.com/qvit/django-color-captcha',
     classifiers=[
-        'Development Status :: Alpha',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
 
         'License :: MIT',
